@@ -15,21 +15,21 @@ export const FooterSection = () => (
 
       <div className="grid gap-8 mx-auto max-w-2xl sm:grid-cols-2">
         <div>
-          <a href="#services" className="hover:text-ink transition-colors block mb-2">
+          <a href="#services" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
             Services
           </a>
-          <a href="#projects" className="hover:text-ink transition-colors block mb-2">
+          <a href="#projects" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
             Projects
           </a>
-          <a href="#about" className="hover:text-ink transition-colors block mb-2">
+          <a href="#about" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
             About
           </a>
         </div>
         <div>
-          <a href="#faq" className="hover:text-ink transition-colors block mb-2">
+          <a href="#faq" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
             Insights
           </a>
-          <a href="#final-cta" className="hover:text-accent transition-colors block mb-2">
+          <a href="#final-cta" className="inline-flex min-h-11 items-center hover:text-accent transition-colors block mb-2">
             Contact
           </a>
         </div>

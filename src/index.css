@@ -1,15 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0F0F0F;
-  --color-ink: #F5F5F5;
-  --color-muted: #A1A1A1;
-  --color-subtle: #666666;
-  --color-surface: #171717;
-  --color-surface-2: #1D1D1D;
-  --color-accent: #D7FF3F;
-  --color-line: rgba(255,255,255,0.10);
+  --color-bg: var(--color-bg-actual);
+  --color-ink: var(--color-ink-actual);
+  --color-muted: var(--color-muted-actual);
+  --color-subtle: var(--color-subtle-actual);
+  --color-surface: var(--color-surface-actual);
+  --color-surface-2: var(--color-surface-2-actual);
+  --color-accent: var(--color-accent-actual);
+  --color-line: var(--color-line-actual);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Dark theme (default) */
+:root {
+  --color-bg-actual: #0A0A0C;
+  --color-ink-actual: #F4F4F6;
+  --color-muted-actual: #A1A1AA;
+  --color-subtle-actual: #8B8B8B;
+  --color-surface-actual: #121216;
+  --color-surface-2-actual: #1D1D24;
+  --color-accent-actual: #00E599;
+  --color-line-actual: #22222A;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --color-bg-actual: #FAFAFA;
+  --color-ink-actual: #111118;
+  --color-muted-actual: #52525B;
+  --color-subtle-actual: #71717A;
+  --color-surface-actual: #F4F4F5;
+  --color-surface-2-actual: #E4E4E7;
+  --color-accent-actual: #059669;
+  --color-line-actual: #D4D4D8;
 }
 
 * {
@@ -27,17 +51,19 @@ html {
 }
 
 body {
-  background-color: #0F0F0F;
-  color: #F5F5F5;
+  background-color: var(--color-bg-actual);
+  color: var(--color-ink-actual);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+  overflow-x: clip;
+  scrollbar-gutter: stable;
 }
 
 ::selection {
-  background-color: #D7FF3F;
-  color: #0F0F0F;
+  background-color: var(--color-accent-actual);
+  color: var(--color-bg-actual);
 }
 
 img {
@@ -47,7 +73,7 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid #D7FF3F;
+  outline: 2px solid var(--color-accent-actual);
   outline-offset: 2px;
 }
 
@@ -58,5 +84,19 @@ img {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* ponytail: reduced-motion media query handled by Framer Motion's useReducedMotion + MotionConfig */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Body scroll lock for mobile menu */
+body.menu-open {
+  overflow: hidden;
 }
 

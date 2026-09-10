@@ -19,7 +19,7 @@ export const ServiceRow = ({
     initial={{ opacity: 0, x: -20, scale: 0.98 }}
     animate={{ opacity: 1, x: 0, scale: 1 }}
     transition={{ duration: 0.7, delay: 0.1 }}
-    className="relative flex flex-col py-6 px-4 bg-surface/50 rounded-2xl border border-line transition-all duration-500 hover:scale-[1.02] hover:bg-surface/80"
+    className="relative flex flex-col py-6 px-4 bg-surface/50 rounded-2xl border border-line transition-colors duration-500 hover:scale-[1.02] hover:bg-surface/80"
   >
     <div className="flex items-start gap-4">
       {/* Number */}

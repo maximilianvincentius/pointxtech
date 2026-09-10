@@ -28,15 +28,15 @@ export const SectionHeading = ({
 }: Props) => {
   const sizes: Record<SectionHeadingVariant, { heading: string; eyebrow: string }> = {
     hero: {
-      heading: 'text-[110px] leading-[120%] mb-4 md:text-[96px] md:leading-[110%]',
+      heading: 'text-[40px] leading-[110%] mb-4 sm:text-[56px] md:text-[72px] md:leading-[110%] lg:text-[80px] lg:leading-[110%]',
       eyebrow: 'mb-6 text-muted uppercase tracking-widest',
     },
     large: {
-      heading: 'text-[80px] leading-[100%] mb-6 md:text-[64px] md:leading-[110%]',
+      heading: 'text-[40px] leading-[100%] mb-6 sm:text-[52px] md:text-[64px] md:leading-[110%] lg:text-[80px] lg:leading-[110%]',
       eyebrow: 'mb-6 text-muted uppercase tracking-widest',
     },
     small: {
-      heading: 'text-[40px] leading-[1.4] mb-4 md:text-[32px]',
+      heading: 'text-[28px] leading-[1.25] mb-4 sm:text-[32px] md:text-[36px] md:leading-[1.3]',
       eyebrow: 'mb-4 text-muted uppercase tracking-wider',
     },
   }

@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Project } from "@/data/projects";
 
+import { ProjectType } from "../../constants/index.ts";
 interface Props {
   project: Project;
   index?: number;
@@ -41,7 +42,7 @@ export const ProjectCard = ({ project, index = 0 }: Props) => (
         damping: 30,
       },
     }}
-    className="group relative overflow-hidden rounded-2xl border border-line bg-surface/30 transition-colors duration-300 hover:border-white/20 hover:bg-surface/50"
+    className="group relative overflow-hidden rounded-2xl border border-line bg-surface/30 transition-colors duration-300 hover:border-accent/30 hover:bg-surface/50"
   >
     {/* Image */}
     <div className="relative aspect-[16/10] overflow-hidden">
@@ -120,7 +121,7 @@ export const ProjectCard = ({ project, index = 0 }: Props) => (
         }}
         className="inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-ink"
       >
-        Live Demo
+        {project.type === ProjectType.REPOSITORY ? "View Repository" : "View Live Demo"}
         <ArrowUpRight className="h-4 w-4" />
       </motion.a>
     </div>

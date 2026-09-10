@@ -92,10 +92,10 @@ export const Hero = ({
               <>
                 <div className="absolute inset-0 bg-gradient-to-br from-surface/50 to-surface/70" />
                 <div
-                  className="absolute inset-0"
+                  className="absolute inset-0 text-muted/10"
                   style={{
                     backgroundImage:
-                      "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0z' stroke='%23ffffff' stroke-opacity='0.05'/%3E%3C/svg%3E\")",
+                      "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0z' stroke='currentColor' stroke-opacity='0.3'/%3E%3C/svg%3E\")",
                     opacity: 0.4,
                   }}
                 />

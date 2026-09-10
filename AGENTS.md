@@ -636,3 +636,15 @@ Do not duplicate the entire design specification inside this file.
 Keep architectural and development instructions here.
 
 Keep visual/design instructions in `DESIGN.md`.
+
+---
+
+# 21. Antislop Filter
+
+When building or editing UI/visual work, also read:
+
+```text
+skills/antislop/antislop.md
+```
+
+Antislop is a filter that catches generic AI-generated design patterns (slop). It complements `DESIGN.md` and `AGENTS.md`. Priority remains: `AGENTS.md` > `DESIGN.md` > antislop.

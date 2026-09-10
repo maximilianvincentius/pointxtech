@@ -7,12 +7,10 @@ import {
 import { useEffect, useRef, useState } from "react";
 
 const logos = [
-  "Lumière",
-  "Northwind",
-  "Atlas Field",
-  "Vera Health",
-  "Science Hub",
-  "Verified",
+  "Phyxhub",
+  "Fractals of Entropy",
+  "Metro Circuit",
+  "Toastor"
 ];
 
 export const TrustSection = () => {
@@ -89,7 +87,7 @@ export const TrustSection = () => {
                 <span
                   key={name}
                   tabIndex={0}
-                  className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-40 transition-opacity duration-200 hover:opacity-70 focus-visible:opacity-70 md:mr-14"
+                  className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-60 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 md:mr-14"
                 >
                   {name}
                 </span>
@@ -100,7 +98,7 @@ export const TrustSection = () => {
                 <span
                   key={name}
                   tabIndex={0}
-                  className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-40 transition-opacity duration-200 hover:opacity-70 focus-visible:opacity-70 md:mr-14"
+                  className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-60 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 md:mr-14"
                 >
                   {name}
                 </span>

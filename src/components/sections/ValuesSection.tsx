@@ -60,7 +60,7 @@ export const ValuesSection = () => (
               once: true,
               amount: 0.2,
             }}
-            className="group relative rounded-2xl border border-line bg-surface/30 p-8 transition-colors duration-300 hover:border-white/20 hover:bg-surface/50"
+            className="group relative rounded-2xl border border-line bg-surface/30 p-8 transition-colors duration-300 hover:border-accent/30 hover:bg-surface/50"
           >
             <span className="mb-4 block text-sm font-bold tracking-wider text-accent">
               {value.number}

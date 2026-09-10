@@ -28,15 +28,15 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
     ref,
   ) => {
     const base =
-      'inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 ' +
-      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 ' +
+      'inline-flex min-h-11 items-center justify-center gap-2 font-medium transition-colors duration-300 ' +
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg ' +
       (fullWidth ? 'w-full ' : '') +
       (disabled ? 'opacity-40 pointer-events-none ' : '')
 
     const variants: Record<ButtonVariant, string> = {
-      primary: 'bg-accent text-bg px-6 py-3 hover:bg-accent/90 active:scale-[0.98] rounded-lg',
-      secondary: 'border border-line bg-surface/50 text-ink px-6 py-3 hover:bg-surface hover:border-white/20 active:scale-[0.98] rounded-lg',
-      ghost: 'text-muted px-4 py-2 hover:text-ink active:scale-[0.98] rounded-lg',
+      primary: 'bg-accent text-bg px-6 py-3 hover:bg-accent/90 rounded-lg',
+      secondary: 'border border-line bg-surface/50 text-ink px-6 py-3 hover:bg-surface hover:border-line/60 rounded-lg',
+      ghost: 'text-muted px-4 py-2 hover:text-ink rounded-lg',
     }
 
     const sizes: Record<'sm' | 'md' | 'lg', string> = {

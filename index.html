@@ -2,16 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="PointX — Premium software engineering studio. We design and build scalable digital products." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <title>PointX — Software Engineering Studio</title>
+    <style>
+      body { margin: 0; background: #0A0A0C; color: #F4F4F6; font-family: Inter, system-ui, sans-serif; }
+      :root[data-theme="light"] body { background: #FAFAFA; color: #111118; }
+      #app-skeleton { min-height: 100vh; padding: 24px; }
+      .skeleton-bar { height: 14px; border-radius: 999px; background: #22222A; animation: pulse 1.5s ease-in-out infinite; }
+      :root[data-theme="light"] .skeleton-bar { background: #D4D4D8; }
+      .skeleton-hero { max-width: 720px; padding-top: 18vh; }
+      .skeleton-title { width: min(90vw, 620px); height: clamp(80px, 16vw, 180px); margin: 24px 0; border-radius: 16px; background: #121216; animation: pulse 1.5s ease-in-out infinite; }
+      :root[data-theme="light"] .skeleton-title { background: #F4F4F5; }
+      .skeleton-copy { width: min(90vw, 480px); }
+      @keyframes pulse { 50% { opacity: .55; } }
+      @media (prefers-reduced-motion: reduce) { .skeleton-bar, .skeleton-title { animation: none; } }
+    </style>
+    <script>
+      // Prevent theme flash: apply stored/preferred theme before paint
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="app-skeleton" aria-hidden="true">
+        <div class="skeleton-bar" style="width: 96px"></div>
+        <div class="skeleton-hero">
+          <div class="skeleton-bar" style="width: 220px"></div>
+          <div class="skeleton-title"></div>
+          <div class="skeleton-copy">
+            <div class="skeleton-bar" style="width: 100%; margin-bottom: 12px"></div>
+            <div class="skeleton-bar" style="width: 78%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
