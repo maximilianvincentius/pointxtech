@@ -79,18 +79,21 @@ const OdometerNumber = ({ value, delay = 0, duration = 1.8 }: OdometerNumberProp
 
   return (
     <span ref={ref} style={{ fontVariantNumeric: 'tabular-nums' }}>
-      {parsed.prefix}
-      {digits.map((d, i) => (
-        <RollingDigit
-          key={i}
-          digit={d}
-          inView={inView}
-          reduceMotion={reduceMotion}
-          delay={delay + i * 0.05}
-          duration={duration}
-        />
-      ))}
-      {parsed.suffix}
+      <span className="sr-only">{value}</span>
+      <span aria-hidden="true">
+        {parsed.prefix}
+        {digits.map((d, i) => (
+          <RollingDigit
+            key={i}
+            digit={d}
+            inView={inView}
+            reduceMotion={reduceMotion}
+            delay={delay + i * 0.05}
+            duration={duration}
+          />
+        ))}
+        {parsed.suffix}
+      </span>
     </span>
   )
 }
@@ -98,7 +101,7 @@ const OdometerNumber = ({ value, delay = 0, duration = 1.8 }: OdometerNumberProp
 export const MetricsSection = () => (
   <section id="metrics" className="bg-bg py-24 md:py-32">
     <div className="mx-auto max-w-7xl px-6">
-      <motion.div
+      <motion.ul
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -106,7 +109,7 @@ export const MetricsSection = () => (
         className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4"
       >
         {metrics.map((metric, i) => (
-          <motion.div
+          <motion.li
             key={metric.label}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -114,18 +117,18 @@ export const MetricsSection = () => (
             transition={{ duration: 0.5, delay: i * 0.08 }}
             className="bg-bg p-10"
           >
-            <div className="mb-3 font-bold tracking-tight text-accent text-5xl md:text-6xl">
+            <p className="mb-3 font-bold tracking-tight text-accent text-5xl md:text-6xl">
               <OdometerNumber value={metric.number} delay={i * 0.1} />
-            </div>
-            <div className="mb-2 text-sm font-medium uppercase tracking-widest text-ink">
+            </p>
+            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-ink">
               {metric.label}
-            </div>
+            </p>
             {metric.description && (
               <p className="text-sm text-muted">{metric.description}</p>
             )}
-          </motion.div>
+          </motion.li>
         ))}
-      </motion.div>
+      </motion.ul>
     </div>
   </section>
 )

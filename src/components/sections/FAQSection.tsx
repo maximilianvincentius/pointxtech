@@ -7,8 +7,8 @@ export const FAQSection = () => (
   <section id="faq" className="bg-bg py-24 md:py-32">
     <div className="mx-auto max-w-3xl px-6">
       <SectionHeading
-        eyebrow="FREQUENTLY ASKED"
-        heading="Insights"
+        eyebrow="COMMON QUESTIONS"
+        heading="Frequently Asked Questions"
         variant="large"
       />
 

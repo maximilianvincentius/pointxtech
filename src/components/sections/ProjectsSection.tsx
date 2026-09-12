@@ -9,6 +9,7 @@ export const ProjectsSection = () => (
       <SectionHeading
         eyebrow="SELECTED WORK"
         heading="Projects"
+        paragraph="A selection of platforms and products we have designed, engineered, and shipped."
         variant="large"
       />
       <div className="mt-16">

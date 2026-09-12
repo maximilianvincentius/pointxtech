@@ -9,7 +9,8 @@ export const ServicesSection = () => (
     <div className="mx-auto max-w-7xl px-6">
       <SectionHeading
         eyebrow="WHAT WE DO"
-        heading="Services"
+        heading="Software Engineering Services"
+        paragraph="From product discovery and web applications to backend engineering, cloud operations, and AI automation — we cover the full software lifecycle."
         variant="large"
       />
 

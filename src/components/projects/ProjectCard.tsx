@@ -49,7 +49,9 @@ export const ProjectCard = ({ project, index = 0 }: Props) => (
       {project.image ? (
         <motion.img
           src={project.image}
-          alt={project.title}
+          alt={`${project.title} — ${project.subtitle}`}
+          loading="lazy"
+          decoding="async"
           initial={false}
           whileHover={{ scale: 1.05 }}
           transition={{

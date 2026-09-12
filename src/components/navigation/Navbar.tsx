@@ -12,7 +12,7 @@ const links = [
   { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
   { label: 'About', href: '#about' },
-  { label: 'Insights', href: '#faq' },
+  { label: 'FAQ', href: '#faq' },
 ]
 
 export const Navigation = ({ className = '' }: Props) => {
@@ -79,17 +79,17 @@ export const Navigation = ({ className = '' }: Props) => {
 
   return (
     <>
-      <motion.nav
+      <motion.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         className={`fixed z-50 top-0 left-0 right-0 flex h-14 items-center justify-between px-4 sm:px-6 pt-[env(safe-area-inset-top)] border-b border-line transition-colors duration-500 ${bg} ${className}`}
       >
         <div className="flex items-center gap-3">
-          <span className="text-lg font-bold text-ink tracking-tight">
+          <a href="/" className="text-lg font-bold text-ink tracking-tight transition-colors hover:text-accent">
             PointX
-          </span>
-          <div className="hidden lg:flex items-center space-x-6 text-muted font-medium">
+          </a>
+          <nav aria-label="Primary" className="hidden lg:flex items-center space-x-6 text-muted font-medium">
             {links.map((link) => (
               <a
                 key={link.href}
@@ -99,7 +99,7 @@ export const Navigation = ({ className = '' }: Props) => {
                 {link.label}
               </a>
             ))}
-          </div>
+          </nav>
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle />
@@ -121,7 +121,7 @@ export const Navigation = ({ className = '' }: Props) => {
             )}
           </button>
         </div>
-      </motion.nav>
+      </motion.header>
       
       <AnimatePresence>
         {isOpen && (
@@ -155,7 +155,7 @@ export const Navigation = ({ className = '' }: Props) => {
               }}
               className="flex-1 items-center justify-center space-y-6 text-center text-2xl font-bold px-6 overflow-y-auto"
             >
-              {[...links, { label: "Let's Talk", href: '#contact' }].map((link) => (
+              {[...links, { label: "Let's Talk", href: '#final-cta' }].map((link) => (
                 <motion.li
                   key={link.href}
                   variants={{

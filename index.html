@@ -3,13 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="PointX — Premium software engineering studio. We design and build scalable digital products." />
+    <title>PointX — Software Engineering Studio for Digital Products</title>
+    <meta name="description" content="PointX is a software engineering studio building scalable web applications, mobile apps, and backend systems — from product discovery through launch and scale." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://pointxtech.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PointX" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://pointxtech.com/" />
+    <meta property="og:title" content="PointX — Software Engineering Studio for Digital Products" />
+    <meta property="og:description" content="PointX is a software engineering studio building scalable web applications, mobile apps, and backend systems — from product discovery through launch and scale." />
+    <meta property="og:image" content="https://pointxtech.com/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="629" />
+    <meta property="og:image:alt" content="PointX — software engineering studio" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PointX — Software Engineering Studio for Digital Products" />
+    <meta name="twitter:description" content="PointX is a software engineering studio building scalable web applications, mobile apps, and backend systems — from product discovery through launch and scale." />
+    <meta name="twitter:image" content="https://pointxtech.com/og-image.png" />
+    <meta name="twitter:image:alt" content="PointX — software engineering studio" />
+
+    <!-- Above-the-fold font weights preloaded (400 body, 700 headings) -->
+    <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://pointxtech.com/#organization",
+            "name": "PointX",
+            "url": "https://pointxtech.com/",
+            "logo": "https://pointxtech.com/favicon.svg",
+            "image": "https://pointxtech.com/og-image.png",
+            "description": "PointX is a software engineering studio that designs, builds, and scales digital products for ambitious businesses."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://pointxtech.com/#website",
+            "url": "https://pointxtech.com/",
+            "name": "PointX",
+            "description": "Software engineering studio building scalable web applications, mobile apps, and backend systems.",
+            "publisher": { "@id": "https://pointxtech.com/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://pointxtech.com/#webpage",
+            "url": "https://pointxtech.com/",
+            "name": "PointX — Software Engineering Studio for Digital Products",
+            "description": "PointX is a software engineering studio building scalable web applications, mobile apps, and backend systems — from product discovery through launch and scale.",
+            "isPartOf": { "@id": "https://pointxtech.com/#website" },
+            "about": { "@id": "https://pointxtech.com/#organization" },
+            "primaryImageOfPage": { "@id": "https://pointxtech.com/#primaryimage" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://pointxtech.com/#primaryimage",
+            "url": "https://pointxtech.com/og-image.png",
+            "width": 1200,
+            "height": 629
+          }
+        ]
+      }
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <title>PointX — Software Engineering Studio</title>
     <style>
+      /* Local Inter — no third-party font requests */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/fonts/inter-400.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('/fonts/inter-500.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('/fonts/inter-600.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/fonts/inter-700.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url('/fonts/inter-800.woff2') format('woff2');
+      }
       body { margin: 0; background: #0A0A0C; color: #F4F4F6; font-family: Inter, system-ui, sans-serif; }
       :root[data-theme="light"] body { background: #FAFAFA; color: #111118; }
       #app-skeleton { min-height: 100vh; padding: 24px; }

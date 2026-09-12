@@ -1,3 +1,5 @@
+import phyxhubImage from "@/assets/phyxhub.png";
+import fractalsImage from "@/assets/fractals-of-entropy.jpg";
 import { motion } from "framer-motion";
 import React from "react";
 import { ProjectType } from "../../constants/index.ts";
@@ -14,7 +16,7 @@ export const ProjectShowcase = () => {
         "A simulation-first platform that lets students manipulate variables and watch physics come alive in real time.",
       industry: ["Education", "Interactive Web", "Simulation"],
       technologies: ["React", "Tailwind CSS", "Express", "MongoDB"],
-      image: "src/assets/phyxhub.png",
+      image: phyxhubImage,
       href: "https://phyxhub.com",
       type: ProjectType.APP,
     },
@@ -27,7 +29,7 @@ export const ProjectShowcase = () => {
         "A stylized Android survival shooter focused on fast-paced combat, resource collection, mission progression, and customizable weapon loadouts.",
       industry: ["Gaming", "Mobile", "Action"],
       technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
-      image: "src/assets/fractals-of-entropy.jpg",
+      image: fractalsImage,
       href: "https://github.com/maximilianvincentius/fractals-of-entropy",
       type: ProjectType.REPOSITORY,
     },

@@ -57,7 +57,7 @@ export const Hero = ({
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-6 max-w-xl text-[16px] text-muted"
             >
-              We design and engineer scalable digital products, internal platforms, and experiences that help ambitious businesses operate better.
+              We design and engineer scalable digital products, web applications, and internal platforms that help ambitious businesses operate better.
             </motion.p>
 
             <motion.div
@@ -85,13 +85,16 @@ export const Hero = ({
             {imageSrc ? (
               <img
                 src={imageSrc}
-                alt="Product UI"
+                alt="Interface of a software product designed and built by PointX"
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
             ) : (
               <>
-                <div className="absolute inset-0 bg-gradient-to-br from-surface/50 to-surface/70" />
+                <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-surface/50 to-surface/70" />
                 <div
+                  aria-hidden="true"
                   className="absolute inset-0 text-muted/10"
                   style={{
                     backgroundImage:
@@ -103,10 +106,10 @@ export const Hero = ({
             )}
 
             {/* Subtle UI elements */}
-            <div className="absolute top-6 left-6 w-14 h-14 rounded bg-accent/10 backdrop-blur-sm flex items-center justify-center">
+            <div aria-hidden="true" className="absolute top-6 left-6 w-14 h-14 rounded bg-accent/10 backdrop-blur-sm flex items-center justify-center">
               <Cpu className="h-6 w-6 text-accent" />
             </div>
-            <div className="absolute bottom-6 right-6 w-12 h-12 rounded bg-accent/10 backdrop-blur-sm flex items-center justify-center">
+            <div aria-hidden="true" className="absolute bottom-6 right-6 w-12 h-12 rounded bg-accent/10 backdrop-blur-sm flex items-center justify-center">
               <Zap className="h-5 w-5 text-accent" />
             </div>
           </motion.div>
