@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Cpu, Zap } from 'lucide-react'
 import React from 'react'
 import { Button } from '@/components/ui/Button'
+import { EarthGlobe } from '@/components/ui/EarthGlobe'
 
 interface Props {
   /** Optional product image src */
@@ -66,49 +67,23 @@ export const Hero = ({
               transition={{ duration: 0.8, delay: 0.5 }}
               className="mt-8 flex flex-wrap items-center gap-4"
             >
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" onClick={() => { window.location.href = '#contact' }}>
                 Start a Project ↗
               </Button>
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" onClick={() => { window.location.href = '#projects' }}>
                 {secondaryLabel}
               </Button>
             </motion.div>
           </div>
 
-          {/* Right side: product visual */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative aspect-[4/3] md:aspect-[5/4] w-full overflow-hidden rounded-2xl border border-line bg-surface/50"
           >
-            {imageSrc ? (
-              <img
-                src={imageSrc}
-                alt="Interface of a software product designed and built by PointX"
-                loading="eager"
-                decoding="async"
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <>
-                <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-surface/50 to-surface/70" />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 text-muted/10"
-                  style={{
-                    backgroundImage:
-                      "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0z' stroke='currentColor' stroke-opacity='0.3'/%3E%3C/svg%3E\")",
-                    opacity: 0.4,
-                  }}
-                />
-              </>
-            )}
+            <EarthGlobe />
 
-            {/* Subtle UI elements */}
-            <div aria-hidden="true" className="absolute top-6 left-6 w-14 h-14 rounded bg-accent/10 backdrop-blur-sm flex items-center justify-center">
-              <Cpu className="h-6 w-6 text-accent" />
-            </div>
             <div aria-hidden="true" className="absolute bottom-6 right-6 w-12 h-12 rounded bg-accent/10 backdrop-blur-sm flex items-center justify-center">
               <Zap className="h-5 w-5 text-accent" />
             </div>

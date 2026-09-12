@@ -1,39 +1,54 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 
-export const FooterSection = () => (
-  <footer className="bg-bg py-20 md:py-24 text-muted">
-    <div className="max-w-5xl mx-auto px-6 text-center">
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        className="mb-10 text-sm leading-relaxed"
-      >
-        © {new Date().getFullYear()} PointX — software engineering studio. All rights reserved.
-      </motion.p>
+const links = [
+  { label: 'Services', href: '#services' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '#about' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact', prominent: true },
+]
 
-      <nav aria-label="Footer" className="grid gap-8 mx-auto max-w-2xl sm:grid-cols-2">
+export const FooterSection = () => (
+  <footer className="bg-bg py-14 text-muted md:py-16">
+    <div className="mx-auto max-w-7xl px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="grid gap-10 md:grid-cols-[minmax(0,1fr)_minmax(12rem,20rem)] md:gap-16"
+      >
         <div>
-          <a href="#services" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
-            Services
+          <a href="/" className="text-lg font-bold tracking-tight text-ink transition-colors hover:text-accent">
+            PointX
           </a>
-          <a href="#projects" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
-            Projects
-          </a>
-          <a href="#about" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
-            About
-          </a>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
+            Software engineering studio building reliable digital products.
+          </p>
         </div>
-        <div>
-          <a href="#faq" className="inline-flex min-h-11 items-center hover:text-ink transition-colors block mb-2">
-            FAQ
-          </a>
-          <a href="#final-cta" className="inline-flex min-h-11 items-center hover:text-accent transition-colors block mb-2">
-            Contact
-          </a>
-        </div>
-      </nav>
+
+        <nav aria-label="Footer">
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.16em] text-ink">Navigation</p>
+          <ul className="flex flex-col items-start gap-1">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={'inline-flex min-h-11 items-center text-sm transition-colors hover:text-ink'}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </motion.div>
+
+      <div className="mt-10 flex flex-col gap-1 border-t border-line pt-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        <p>© {new Date().getFullYear()} PointX — software engineering studio.</p>
+        <p>All rights reserved.</p>
+      </div>
     </div>
   </footer>
 )

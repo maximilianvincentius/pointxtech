@@ -17,7 +17,7 @@ export const FinalCTASection = () => (
         <p className="mb-8 max-w-xl mx-auto text-muted">
           Let's discuss your idea and explore how we can build something remarkable together.
         </p>
-        <Button variant="primary" size="lg">
+        <Button variant="primary" size="lg" onClick={() => { window.location.hash = 'contact' }}>
           Start a Conversation
         </Button>
       </motion.div>

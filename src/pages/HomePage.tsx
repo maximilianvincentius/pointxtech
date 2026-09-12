@@ -12,6 +12,7 @@ import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { FinalCTASection } from '@/components/sections/FinalCTASection'
+import { ContactSection } from '@/components/sections/ContactSection'
 import { FooterSection } from '@/components/sections/FooterSection'
 
 const HomePage = () => {
@@ -30,6 +31,7 @@ const HomePage = () => {
         <AboutSection />
         <FAQSection />
         <FinalCTASection />
+        <ContactSection />
         <FooterSection />
       </motion.main>
     </>

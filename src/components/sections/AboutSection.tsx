@@ -19,10 +19,10 @@ export const AboutSection = () => (
       </div>
 
       <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3">
-        <Button variant="primary" size="md">
+        <Button variant="primary" size="md" onClick={() => { window.location = '#contact' }}>
           Start a Project
         </Button>
-        <Button variant="secondary" size="md">
+        <Button variant="secondary" size="md" onClick={() => { window.location = '#projects' }}>
           View Our Work
         </Button>
       </div>

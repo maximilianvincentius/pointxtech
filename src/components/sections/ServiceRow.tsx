@@ -59,8 +59,6 @@ export const ServiceRow = ({
           whileHover={{ x: 4 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <ArrowRight className="h-4 w-4" />
-          <span>Explore</span>
         </motion.span>
       </div>
     </div>
