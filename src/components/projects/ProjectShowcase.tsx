@@ -1,5 +1,5 @@
-import phyxhubImage from "@/assets/phyxhub.png";
-import fractalsImage from "@/assets/fractals-of-entropy.jpg";
+import phyxhubImage from "@/assets/phyxhub.webp";
+import fractalsImage from "@/assets/fractals.webp";
 import { motion } from "framer-motion";
 import React from "react";
 import { ProjectType } from "../../constants/index.ts";

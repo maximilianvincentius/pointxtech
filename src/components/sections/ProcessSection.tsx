@@ -51,11 +51,11 @@ export const ProcessSection = () => (
           >
             <span className="mb-6 block h-1 w-full bg-accent/20 rounded-full">
               <motion.span
-                initial={{ width: 0 }}
-                whileInView={{ width: '100%' }}
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: i * 0.1 }}
-                className="block h-full bg-accent rounded-full"
+                className="block h-full origin-left bg-accent rounded-full"
               />
             </span>
             <span className="mb-3 block text-accent font-bold text-sm">

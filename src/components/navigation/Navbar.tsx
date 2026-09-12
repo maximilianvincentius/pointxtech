@@ -24,8 +24,8 @@ export const Navigation = ({ className = '' }: Props) => {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
     onScroll()
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll, { passive: true })
   }, [])
 
   // Body scroll lock + Escape key + focus trap when mobile menu open
