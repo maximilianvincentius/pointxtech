@@ -1,11 +1,10 @@
-import { motion } from "framer-motion"
 import React, { lazy, Suspense } from "react"
 import { Navigation } from "@/components/navigation/Navbar"
 import { Hero } from "@/components/sections/Hero"
-import { TrustSection } from "@/components/sections/TrustSection"
-import { ValuesSection } from "@/components/sections/ValuesSection"
-import { ServicesSection } from "@/components/sections/ServicesSection"
 
+const TrustSection = lazy(() => import("@/components/sections/TrustSection").then(m => ({ default: m.TrustSection })))
+const ValuesSection = lazy(() => import("@/components/sections/ValuesSection").then(m => ({ default: m.ValuesSection })))
+const ServicesSection = lazy(() => import("@/components/sections/ServicesSection").then(m => ({ default: m.ServicesSection })))
 const ProjectsSection = lazy(() => import("@/components/sections/ProjectsSection").then(m => ({ default: m.ProjectsSection })))
 const ProcessSection = lazy(() => import("@/components/sections/ProcessSection").then(m => ({ default: m.ProcessSection })))
 const MetricsSection = lazy(() => import("@/components/sections/MetricsSection").then(m => ({ default: m.MetricsSection })))
@@ -33,11 +32,17 @@ const HomePage = () => {
   return (
     <>
       <Navigation />
-      <motion.main initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+      <main>
         <Hero />
-        <TrustSection />
-        <ValuesSection />
-        <ServicesSection />
+        <Suspense fallback={<SectionFallback />}>
+          <TrustSection />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <ValuesSection />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <ServicesSection />
+        </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <ProjectsSection />
         </Suspense>
@@ -65,7 +70,7 @@ const HomePage = () => {
         <Suspense fallback={<SectionFallback />}>
           <FooterSection />
         </Suspense>
-      </motion.main>
+      </main>
     </>
   )
 }

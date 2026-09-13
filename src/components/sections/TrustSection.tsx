@@ -3,6 +3,7 @@ import {
   useAnimationFrame,
   useMotionValue,
   useReducedMotion,
+  useInView,
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -16,10 +17,12 @@ const logos = [
 export const TrustSection = () => {
   const prefersReducedMotion = useReducedMotion();
   const setRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const pausedRef = useRef(false);
   const widthRef = useRef(0);
   const x = useMotionValue(0);
   const [isReady, setIsReady] = useState(false);
+  const inView = useInView(sectionRef, { once: false, amount: 0.2 });
 
   // ponytail: width auto-remount logic skipped; ResizeObserver covers responsive reflow.
   useEffect(() => {
@@ -39,14 +42,14 @@ export const TrustSection = () => {
 
   useAnimationFrame((_, delta) => {
     const width = widthRef.current;
-    if (prefersReducedMotion || pausedRef.current || !width) return;
+    if (prefersReducedMotion || pausedRef.current || !width || !inView) return;
 
     const next = x.get() - (delta / 1000) * 24;
     x.set(next <= -width ? next + width : next);
   });
 
   return (
-    <section className="border-t border-line bg-bg py-16">
+    <section ref={sectionRef} className="border-t border-line bg-bg py-16">
       <div className="mx-auto max-w-7xl px-6">
         <motion.p
           initial={{ opacity: 0 }}

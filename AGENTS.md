@@ -648,3 +648,32 @@ skills/antislop/antislop.md
 ```
 
 Antislop is a filter that catches generic AI-generated design patterns (slop). It complements `DESIGN.md` and `AGENTS.md`. Priority remains: `AGENTS.md` > `DESIGN.md` > antislop.
+
+---
+
+## Anti-Repetition Rule
+
+Before modifying code:
+
+1. Search existing implementation.
+2. Verify whether requested behavior already exists.
+3. Never recreate an existing solution.
+4. Never repeat completed investigation.
+5. Never refactor working code without concrete reason.
+6. Prefer smallest change solves problem.
+
+Maintain task checklist:
+
+* `[ ]` Not investigated
+* `[~]` In progress
+* `[✓]` Completed verified
+* `[-]` Not applicable
+
+Once an item `[✓]`, do not revisit it unless new evidence demonstrates regression unresolved problem.
+
+If requested optimization already implemented correctly, report: `Already implemented — no change needed.`
+
+Do not make cosmetic or architectural changes merely demonstrate activity.
+
+Every code change must specific reason tied current task.
+

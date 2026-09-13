@@ -80,8 +80,8 @@ export const Navigation = ({ className = '' }: Props) => {
   return (
     <>
       <motion.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: -20 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed z-50 top-0 left-0 right-0 flex h-14 items-center justify-between px-4 sm:px-6 pt-[env(safe-area-inset-top)] border-b border-line transition-colors duration-500 ${bg} ${className}`}
       >
