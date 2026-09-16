@@ -1,5 +1,6 @@
 import phyxhubImage from "@/assets/phyxhub.webp";
 import fractalsImage from "@/assets/fractals.webp";
+import metroCircuitImage from "@/assets/metro-circuit.webp";
 import { motion } from "framer-motion";
 import React from "react";
 import { ProjectType } from "../../constants/index.ts";
@@ -31,6 +32,19 @@ export const ProjectShowcase = () => {
       technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
       image: fractalsImage,
       href: "https://github.com/maximilianvincentius/fractals-of-entropy",
+      type: ProjectType.REPOSITORY,
+    },
+    {
+      id: "metro-circuit",
+      number: "03",
+      title: "Metro Circuit",
+      subtitle: "Racing Game",
+      description:
+        "Metro Circuit is an Android puzzle-exploration game created and developed by Maximilian Vincentius. Players explore a stylized futuristic city, follow mission objectives, move boxes, activate pressure plates and targets, complete puzzle stages, and unlock new areas.",
+      industry: ["Gaming", "Mobile", "Action"],
+      technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
+      image: metroCircuitImage,
+      href: "https://github.com/maximilianvincentius/metro-circuit",
       type: ProjectType.REPOSITORY,
     },
   ];
