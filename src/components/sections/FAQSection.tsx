@@ -8,7 +8,7 @@ export const FAQSection = () => (
     <div className="mx-auto max-w-3xl px-6">
       <SectionHeading
         eyebrow="COMMON QUESTIONS"
-        heading="Frequently Asked Questions"
+        heading="Questions"
         variant="large"
       />
 

@@ -103,8 +103,8 @@ export const Navigation = ({ className = '' }: Props) => {
         </div>
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="primary" size="md" className="hidden lg:inline-flex" aria-label="Let's Talk — start a conversation" onClick={() => { window.location = '#contact' }}>
-            Let's Talk
+          <Button variant="primary" size="md" className="hidden lg:inline-flex" aria-label="Get in Touch" onClick={() => { window.location = '#contact' }}>
+            Get in Touch
           </Button>
           <button
             ref={buttonRef}
@@ -155,7 +155,7 @@ export const Navigation = ({ className = '' }: Props) => {
               }}
               className="flex-1 items-center justify-center space-y-6 text-center text-2xl font-bold px-6 overflow-y-auto"
             >
-              {[...links, { label: "Let's Talk", href: '#contact' }].map((link) => (
+              {[...links, { label: "Get in Touch", href: '#contact' }].map((link) => (
                 <motion.li
                   key={link.href}
                   variants={{

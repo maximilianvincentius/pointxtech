@@ -3,7 +3,7 @@ import { Zap } from 'lucide-react'
 import React, { Suspense, lazy, useEffect, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 
-const EarthGlobe = lazy(() => import('@/components/ui/EarthGlobe').then(m => ({ default: m.EarthGlobe })))
+const PointXTerminal = lazy(() => import('@/components/ui/PointXTerminal').then(m => ({ default: m.PointXTerminal })))
 
 interface Props {
   /** Optional product image src */
@@ -22,7 +22,7 @@ interface Props {
  */
 export const Hero = ({
   imageSrc,
-  secondaryLabel = 'View Our Work',
+  secondaryLabel = 'About Me',
 }: Props) => {
   const [shouldMountGlobe, setShouldMountGlobe] = useState(false)
 
@@ -48,22 +48,22 @@ export const Hero = ({
               transition={{ duration: 0.5, delay: 0 }}
               className="mb-6 text-muted uppercase tracking-widest text-sm"
             >
-              SOFTWARE ENGINEERING STUDIO
+              INDEPENDENT PROJECTS
             </motion.p>
 
-            <h1 className="mb-4 font-bold tracking-tight text-ink leading-[110%] text-[48px] md:text-[72px]">
-              WE BUILD SOFTWARE THAT MOVES BUSINESS FORWARD.
+            <h1 className="mb-4 font-bold tracking-tight text-ink leading-[110%] text-[40px] md:text-[64px]">
+              ENGINEERING BUILT FROM CURIOSITY.
             </h1>
 
             <p className="mt-6 max-w-xl text-[16px] text-muted">
-              We design and engineer scalable digital products, web applications, and internal platforms that help ambitious businesses operate better.
+              A collection of independent projects exploring science, technology, games, and ideas I find interesting. Each one is a work in progress and a chance to learn something new.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button variant="primary" size="lg" onClick={() => { window.location.href = '#contact' }}>
-                Start a Project ↗
+              <Button variant="primary" size="lg" onClick={() => { window.location.href = '#projects' }}>
+                Explore Projects ↗
               </Button>
-              <Button variant="secondary" size="lg" onClick={() => { window.location.href = '#projects' }}>
+              <Button variant="secondary" size="lg" onClick={() => { window.location.href = '#about' }}>
                 {secondaryLabel}
               </Button>
             </div>
@@ -81,7 +81,7 @@ export const Hero = ({
                   Loading...
                 </div>
               }>
-                <EarthGlobe />
+                <PointXTerminal />
               </Suspense>
             ) : (
               <div className="h-full w-full flex items-center justify-center text-muted text-sm">

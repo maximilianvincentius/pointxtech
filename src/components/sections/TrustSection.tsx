@@ -7,12 +7,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const logos = [
-  "Phyxhub",
-  "Fractals of Entropy",
-  "Metro Circuit",
-  "Toastor"
-];
+const logos = ["Phyxhub", "Fractals of Entropy", "Metro Circuit"];
 
 export const TrustSection = () => {
   const prefersReducedMotion = useReducedMotion();
@@ -58,7 +53,7 @@ export const TrustSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 text-center text-sm uppercase tracking-widest text-muted"
         >
-          Trusted by teams building at scale
+          Technologies I enjoy working with
         </motion.p>
 
         <div
@@ -85,28 +80,23 @@ export const TrustSection = () => {
             style={{ x }}
             className={`flex w-max items-center ${isReady ? "" : "invisible"}`}
           >
-            <div ref={setRef} className="flex shrink-0 items-center">
-              {logos.map((name) => (
-                <span
-                  key={name}
-                  tabIndex={0}
-                  className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-60 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 md:mr-14"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
-            <div className="flex shrink-0 items-center">
-              {logos.map((name) => (
-                <span
-                  key={name}
-                  tabIndex={0}
-                  className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-60 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 md:mr-14"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
+            {Array.from({ length: 10 }).map((_, index) => (
+              <div
+                key={index}
+                ref={setRef}
+                className="flex shrink-0 items-center"
+              >
+                {logos.map((name) => (
+                  <span
+                    key={name}
+                    tabIndex={0}
+                    className="mr-8 cursor-default whitespace-nowrap text-lg font-bold tracking-wider text-subtle opacity-60 transition-opacity duration-200 hover:opacity-100 focus-visible:opacity-100 md:mr-14"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>

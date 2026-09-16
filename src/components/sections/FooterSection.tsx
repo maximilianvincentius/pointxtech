@@ -24,7 +24,7 @@ export const FooterSection = () => (
             PointX
           </a>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-            Software engineering studio building reliable digital products.
+            Independent projects, still evolving.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export const FooterSection = () => (
       </motion.div>
 
       <div className="mt-10 flex flex-col gap-1 border-t border-line pt-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-        <p>© {new Date().getFullYear()} PointX — software engineering studio.</p>
+        <p>© {new Date().getFullYear()} PointX — independent projects built from curiosity.</p>
         <p>All rights reserved.</p>
       </div>
     </div>

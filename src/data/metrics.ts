@@ -7,22 +7,22 @@ export interface Metric {
 export const metrics: Metric[] = [
   {
     number: '3+',
-    label: 'YEARS ENGINEERING',
-    description: 'We have deep expertise building at scale.',
+    label: 'YEARS BUILDING',
+    description: 'Learning and shipping projects since 2022.',
   },
   {
-    number: '20+',
+    number: '5+',
     label: 'PROJECTS',
-    description: 'Delivered solutions for global clients.',
+    description: 'Independent projects across different domains.',
   },
   {
-    number: '99%',
-    label: 'UPTIME',
-    description: 'Reliably hosted for 24/7 usage.',
+    number: '15+',
+    label: 'TECHNOLOGIES USED',
+    description: 'Tools and frameworks picked up along the way.',
   },
   {
-    number: '24/7',
-    label: 'PRODUCTION SUPPORT',
-    description: 'Round‑the‑clock assistance when you need it.',
+    number: '∞',
+    label: 'IDEAS LEFT TO EXPLORE',
+    description: 'The backlog keeps growing faster than I can build.',
   },
 ]

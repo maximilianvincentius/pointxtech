@@ -7,8 +7,8 @@ export const AboutSection = () => (
   <section id="about" className="bg-bg py-24 md:py-32">
     <div className="mx-auto max-w-7xl px-6">
       <SectionHeading
-        eyebrow="WHO WE ARE"
-        heading="Software Engineering Studio"
+        eyebrow="ABOUT ME"
+        heading="Building Out of Curiosity"
         variant="large"
       />
 

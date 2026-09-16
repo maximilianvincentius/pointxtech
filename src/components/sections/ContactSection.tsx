@@ -61,9 +61,9 @@ export const ContactSection = () => {
     <section id="contact" className="bg-bg py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="LET'S TALK"
-          heading="Start Your Project"
-          paragraph="Have a project in mind? Tell us what you're building — we'll get back to you within one business day."
+          eyebrow="GET IN TOUCH"
+          heading="Say Hello"
+          paragraph="Want to talk about a project, share an idea, or just say hi? I'd love to hear from you."
           variant="large"
         />
         <motion.div
@@ -85,7 +85,7 @@ export const ContactSection = () => {
               </div>
               <h3 className="text-xl font-bold text-ink">Message sent</h3>
               <p className="text-muted leading-relaxed">
-                Thanks for reaching out. We'll review your project details and get back to you within one business day.
+                Thanks for reaching out. I'll review your message and get back to you soon.
               </p>
               <Button variant="secondary" size="md" onClick={() => setStatus('idle')}>
                 Send another message
@@ -98,7 +98,7 @@ export const ContactSection = () => {
                 {touched.name && !name.trim() && <ErrorMsg>Name is required.</ErrorMsg>}
               </Field>
               <Field label="Email" required id="contact-email">
-                <input id="contact-email" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={() => touch('email')} placeholder="you@company.com" className={inputBase} />
+                <input id="contact-email" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={() => touch('email')} placeholder="you@email.com" className={inputBase} />
                 {touched.email && !email.trim() && <ErrorMsg>Email is required.</ErrorMsg>}
                 {touched.email && email.trim() && !emailValid && <ErrorMsg>Enter a valid email address.</ErrorMsg>}
               </Field>
@@ -106,7 +106,7 @@ export const ContactSection = () => {
                 <input id="contact-phone" type="tel" autoComplete="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+1 (555) 000-0000" className={inputBase} />
               </Field>
               <Field label="Message" required id="contact-message">
-                <textarea id="contact-message" required rows={5} value={message} onChange={(e) => setMessage(e.target.value)} onBlur={() => touch('message')} placeholder="Tell us about your project — goals, timeline, budget range..." className={inputBase + ' resize-y'} />
+                <textarea id="contact-message" required rows={5} value={message} onChange={(e) => setMessage(e.target.value)} onBlur={() => touch('message')} placeholder="Tell me about a project, idea, or anything interesting..." className={inputBase + ' resize-y'} />
                 {touched.message && !message.trim() && <ErrorMsg>Message is required.</ErrorMsg>}
               </Field>
               {status === 'error' && (

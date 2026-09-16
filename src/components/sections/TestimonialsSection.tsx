@@ -26,7 +26,7 @@ export const TestimonialsSection = () => {
     <section id="testimonials" className="bg-bg py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="WHAT OUR CLIENTS SAY"
+          eyebrow="WHAT MY USERS SAYS"
           heading="Outcomes Speak Louder"
           variant="large"
         />

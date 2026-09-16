@@ -5,21 +5,21 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const values = [
   {
     number: "01",
-    title: "Clarity Over Complexity",
+    title: "Curiosity",
     description:
-      "We translate ambiguous business problems into clear technical direction. No jargon, no confusion.",
+      "Most projects start because something feels interesting enough to explore. The question comes first, the code follows.",
   },
   {
     number: "02",
-    title: "Speed Without Sacrifice",
+    title: "Learning by Building",
     description:
-      "We move fast because we make good decisions early. Clean architecture, pragmatic choices, working software.",
+      "Real projects are the best way to understand technology. I learn by shipping, debugging, and figuring out what actually works.",
   },
   {
     number: "03",
-    title: "Build for Scale",
+    title: "Iteration",
     description:
-      "Every system we ship is designed to grow with your business. We solve today's problem without creating tomorrow's.",
+      "Projects don't have to be finished. They evolve as I learn new things and come up with new ideas. Every version is a step forward.",
   },
 ];
 
@@ -43,8 +43,8 @@ export const ValuesSection = () => (
   <section id="values" className="bg-bg py-24 md:py-32">
     <div className="mx-auto max-w-7xl px-6">
       <SectionHeading
-        eyebrow="WHY POINTX"
-        heading="Engineering Built on Principles"
+        eyebrow="HOW I APPROACH BUILDING"
+        heading="Curiosity, Iteration, Learning"
         variant="large"
       />
 

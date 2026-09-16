@@ -7,44 +7,44 @@ export interface FAQItem {
 export const faqs: FAQItem[] = [
   {
     id: 'f1',
-    question: 'What type of software do you build?',
+    question: 'What kind of projects do you build?',
     answer:
-      'We build custom web applications, mobile apps, internal platforms, and API-driven systems for businesses looking to ship fast and scale reliably.',
+      'A mix of web applications, interactive simulations, games, and experiments. Most start from something I find interesting and grow from there.',
   },
   {
     id: 'f2',
-    question: 'How does your development process work?',
+    question: 'How do you approach a new project?',
     answer:
-      'We follow a clear five‑step process — Discover, Define, Build, Launch, and Scale. Each phase has deliverables and reviews so you always know where things stand.',
+      'Usually it starts with curiosity about a problem or idea. I figure out the scope, pick the right tools, and start building. The direction often evolves as I learn more along the way.',
   },
   {
     id: 'f3',
-    question: 'How long does a project take?',
+    question: 'Are these projects finished?',
     answer:
-      'It depends on scope, but a typical MVP takes 8–12 weeks. Larger platforms are usually delivered in quarterly increments with regular milestones.',
+      'Most are works in progress. I treat them as ongoing experiments that keep evolving as I learn new things and come up with new ideas.',
   },
   {
     id: 'f4',
-    question: 'Can you work with an existing development team?',
+    question: 'Do you work on these alone?',
     answer:
-      'Yes. We can augment your team with senior engineers, take ownership of specific components, or act as the lead technical partner.',
+      'Mostly yes. Some projects have had collaborators or mentors involved, but I drive the direction and do the building.',
   },
   {
     id: 'f5',
-    question: 'Do you provide maintenance?',
+    question: 'What technologies do you use?',
     answer:
-      'Yes. We offer post‑launch monitoring, feature roadmaps, and ongoing support contracts tailored to the level of involvement you need.',
+      'It depends on the project. I tend to reach for React, TypeScript, and Node for web work, but I pick whatever makes sense for what I am trying to build.',
   },
   {
     id: 'f6',
-    question: 'Can you build MVPs?',
+    question: 'Can I try the projects?',
     answer:
-      'Yes. We specialize in building production-ready MVPs that are scalable from day one — not throw‑away prototypes.',
+      'Yes. Most have live demos or links you can explore. Some are still in development and may not be fully polished yet.',
   },
   {
     id: 'f7',
-    question: 'Can you work with startups?',
+    question: 'How can I get in touch?',
     answer:
-      'Yes. We work with funded startups and bootstrapped founders alike. We can also help with investor demos and pitch‑ready presentations.',
+      'You can reach me through the contact form below or by email. I am always happy to talk about projects, ideas, or interesting problems.',
   },
 ]

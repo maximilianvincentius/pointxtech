@@ -5,13 +5,13 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 const steps = [
   {
     number: '01',
-    title: 'Discover',
-    description: 'We map your business, users, and constraints to define what success actually looks like.',
+    title: 'Explore',
+    description: 'Dive into something interesting. Figure out what the problem is and what would be cool to build.',
   },
   {
     number: '02',
-    title: 'Define',
-    description: 'We turn that clarity into a focused scope, technical architecture, and pragmatic roadmap.',
+    title: 'Plan',
+    description: 'Turn the idea into a focused scope. Pick the right tools and figure out a practical approach.',
   },
   {
     number: '03',
@@ -20,12 +20,12 @@ const steps = [
   },
   {
     number: '04',
-    title: 'Launch',
+    title: 'Ship',
     description: 'We orchestrate a smooth, monitored release and hand over with documentation and confidence.',
   },
   {
     number: '05',
-    title: 'Scale',
+    title: 'Evolve',
     description: 'Post-launch, we optimize, iterate, and grow the product as your business evolves.',
   },
 ]
@@ -34,8 +34,8 @@ export const ProcessSection = () => (
   <section id="process" className="bg-bg py-24 md:py-32">
     <div className="mx-auto max-w-7xl px-6">
       <SectionHeading
-        eyebrow="HOW WE WORK"
-        heading="The Process"
+        eyebrow="HOW I BUILD"
+        heading="My Approach"
         variant="large"
       />
 

@@ -12,13 +12,13 @@ export const FinalCTASection = () => (
         className="text-center"
       >
         <h2 className="mb-4 text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-ink">
-          Ready to ship?
+          Projects still evolving.
         </h2>
         <p className="mb-8 max-w-xl mx-auto text-muted">
-          Let's discuss your idea and explore how we can build something remarkable together.
+          These are independent projects I keep building and exploring. Each one teaches me something new.
         </p>
-        <Button variant="primary" size="lg" onClick={() => { window.location.hash = 'contact' }}>
-          Start a Conversation
+        <Button variant="primary" size="lg" onClick={() => { window.location.hash = 'projects' }}>
+          Explore Projects
         </Button>
       </motion.div>
     </div>

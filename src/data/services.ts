@@ -8,44 +8,44 @@ export interface Service {
 export const services: Service[] = [
   {
     number: '01',
-    title: 'Product Development',
+    title: 'Product Ideas',
     description:
-      'We turn ambiguous business problems into clear product direction, then build the thing end to end.',
-    tags: ['Discovery', 'Prototyping', 'Roadmaps'],
+      'Started from interesting problems and turned them into working products. Figuring out what to build and why.',
+    tags: ['Discovery', 'Prototyping', 'Iteration'],
   },
   {
     number: '02',
     title: 'Web Applications',
     description:
-      'Fast, accessible web platforms engineered to handle real scale and real users.',
+      'Building fast, accessible web apps with modern tools. Learning by shipping real things.',
     tags: ['React', 'TypeScript', 'Performance'],
   },
   {
     number: '03',
-    title: 'Mobile Applications',
+    title: 'Game Development',
     description:
-      'Native-quality mobile experiences with the polish your customers expect.',
-    tags: ['iOS', 'Android', 'Cross-platform'],
+      'Exploring interactive systems and game mechanics. Building things that are fun to use.',
+    tags: ['Game Engines', 'Physics', 'Interaction'],
   },
   {
     number: '04',
-    title: 'Backend & API Engineering',
+    title: 'Backend & APIs',
     description:
-      'Resilient services, clean APIs, and data layers designed to grow with you.',
+      'Designing data models and building APIs. Understanding how systems talk to each other.',
     tags: ['Node', 'Postgres', 'GraphQL'],
   },
   {
     number: '05',
-    title: 'Cloud & DevOps',
+    title: 'Infrastructure',
     description:
-      'Reliable infrastructure, observability, and deployment pipelines you can trust.',
+      'Setting up deployment, containers, and CI/CD. Figuring out how code actually gets to production.',
     tags: ['AWS', 'Docker', 'CI/CD'],
   },
   {
     number: '06',
     title: 'AI & Automation',
     description:
-      'Practical AI features and automation that remove friction from real workflows.',
+      'Experimenting with LLMs and automation workflows. Testing what AI can do in practice.',
     tags: ['LLMs', 'Agents', 'Workflows'],
   },
 ]

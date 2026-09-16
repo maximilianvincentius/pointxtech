@@ -40,7 +40,7 @@ export const ProjectShowcase = () => {
       title: "Metro Circuit",
       subtitle: "Racing Game",
       description:
-        "Metro Circuit is an Android puzzle-exploration game created and developed by Maximilian Vincentius. Players explore a stylized futuristic city, follow mission objectives, move boxes, activate pressure plates and targets, complete puzzle stages, and unlock new areas.",
+        "Metro Circuit is an Android puzzle-exploration game created. Players explore a stylized futuristic city, follow mission objectives, move boxes, activate pressure plates and targets, complete puzzle stages, and unlock new areas.",
       industry: ["Gaming", "Mobile", "Action"],
       technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
       image: metroCircuitImage,

@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import type { Project } from "@/data/projects";
+import { ExpandableText } from "@/components/ui/ExpandableText";
 
 import { ProjectType } from "../../constants/index.ts";
 interface Props {
@@ -92,9 +93,9 @@ export const ProjectCard = ({ project, index = 0 }: Props) => (
       <p className="mb-4 text-base text-muted">{project.subtitle}</p>
 
       {/* Description */}
-      <p className="mb-6 line-clamp-3 text-sm text-muted">
-        {project.description}
-      </p>
+      <div className="mb-6">
+        <ExpandableText text={project.description} />
+      </div>
 
       {/* Technologies */}
       <div className="mb-6 flex flex-wrap gap-2">
