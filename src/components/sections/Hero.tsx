@@ -27,8 +27,10 @@ export const Hero = ({
   const [shouldMountGlobe, setShouldMountGlobe] = useState(false)
 
   useEffect(() => {
-    const id = requestIdleCallback(() => setShouldMountGlobe(true), { timeout: 500 })
-    return () => cancelIdleCallback(id)
+    const callback = typeof requestIdleCallback !== 'undefined' ? requestIdleCallback : setTimeout
+    const cancelCallback = typeof cancelIdleCallback !== 'undefined' ? cancelIdleCallback : clearTimeout
+    const id = callback(() => setShouldMountGlobe(true), { timeout: 500 })
+    return () => cancelCallback(id)
   }, [])
 
   return (
