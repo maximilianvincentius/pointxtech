@@ -1,4 +1,4 @@
-import { ProjectType } from '../constants/index.ts';
+import { ProjectType } from "../constants/index.ts";
 import phyxhubImage from "@/assets/phyxhub.webp";
 import fractalsImage from "@/assets/fractals.webp";
 import metroCircuitImage from "@/assets/metro-circuit.webp";
@@ -29,78 +29,78 @@ export interface Project {
 }
 
 export const projects = [
-    {
-      id: "phyxhub",
-      slug: "phyxhub",
-      number: "01",
-      title: "PhyxHub",
-      subtitle: "Interactive Physics Learning Platform",
-      description:
-        "A simulation-first platform that lets students manipulate variables and watch physics come alive in real time.",
-      industry: ["Education", "Interactive Web", "Simulation"],
-      technologies: ["React", "Tailwind CSS", "Express", "MongoDB"],
-      image: phyxhubImage,
-      href: "https://phyxhub.com",
-      type: ProjectType.APP,
-      overview: `PhyxHub is an interactive physics learning platform designed to help students understand complex physics concepts through hands-on simulation.
+  {
+    id: "phyxhub",
+    slug: "phyxhub",
+    number: "01",
+    title: "PhyxHub",
+    subtitle: "Interactive Physics Learning Platform",
+    description:
+      "A simulation-first platform that lets students manipulate variables and watch physics come alive in real time.",
+    industry: ["Education", "Interactive Web", "Simulation"],
+    technologies: ["React", "Tailwind CSS", "Express", "MongoDB"],
+    image: phyxhubImage,
+    href: "https://phyxhub.com",
+    type: ProjectType.APP,
+    overview: `PhyxHub is an interactive physics learning platform designed to help students understand complex physics concepts through hands-on simulation.
 
 Built for students and educators who struggle with abstract physics concepts, PhyxHub provides a visual, interactive environment where learners can manipulate variables and observe real-time outcomes.
 
 The platform bridges the gap between theoretical physics and practical understanding by allowing users to experiment with physics simulations in a controlled, visual environment.`,
-      problem: `Traditional physics education often relies on static diagrams and mathematical formulas that can feel disconnected from real-world applications. Students struggle to visualize how changing one variable affects an entire system.
+    problem: `Traditional physics education often relies on static diagrams and mathematical formulas that can feel disconnected from real-world applications. Students struggle to visualize how changing one variable affects an entire system.
 
 Many existing educational tools are either too simplistic or require expensive software licenses, making them inaccessible to many students and educators.`,
-      solution: `PhyxHub addresses this by providing browser-based physics simulations that are both interactive and accessible. Students can adjust parameters in real-time and immediately see the effects, creating a direct feedback loop between theory and observation.
+    solution: `PhyxHub addresses this by providing browser-based physics simulations that are both interactive and accessible. Students can adjust parameters in real-time and immediately see the effects, creating a direct feedback loop between theory and observation.
 
 The platform uses modern web technologies to deliver smooth, responsive simulations that run directly in the browser without requiring downloads or installations.`,
-      features: [
-        "Real-time physics simulations with adjustable parameters",
-        "Interactive visualizations that respond to user input",
-        "Browser-based access with no installation required",
-        "Responsive design for desktop and mobile devices",
-        "Progressive learning paths for different skill levels",
-      ],
-      techBreakdown: {
-        frontend: ["React", "Tailwind CSS"],
-        backend: ["Express", "Node.js"],
-        database: ["MongoDB"],
-      },
+    features: [
+      "Real-time physics simulations with adjustable parameters",
+      "Interactive visualizations that respond to user input",
+      "Browser-based access with no installation required",
+      "Responsive design for desktop and mobile devices",
+      "Progressive learning paths for different skill levels",
+    ],
+    techBreakdown: {
+      frontend: ["React", "Tailwind CSS"],
+      backend: ["Express", "Node.js"],
+      database: ["MongoDB"],
     },
-    {
-      id: "fractals-of-entropy",
-      slug: "fractals-of-entropy",
-      number: "02",
-      title: "Fractals of Entropy",
-      subtitle: "Top-Down Survival Shooter",
-      description:
-        "A stylized Android survival shooter focused on fast-paced combat, resource collection, mission progression, and customizable weapon loadouts.",
-      industry: ["Gaming", "Mobile", "Action"],
-      technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
-      image: fractalsImage,
-      href: "https://github.com/maximilianvincentius/fractals-of-entropy",
-      type: ProjectType.REPOSITORY,
-      overview: `Fractals of Entropy is a stylized top-down survival shooter for Android. Built with Unity and C#, the game focuses on fast-paced combat encounters, resource collection, mission progression, and deep weapon customization.
+  },
+  {
+    id: "fractals-of-entropy",
+    slug: "fractals-of-entropy",
+    number: "02",
+    title: "Fractals of Entropy",
+    subtitle: "Top-Down Survival Shooter",
+    description:
+      "A stylized Android survival shooter focused on fast-paced combat, resource collection, mission progression, and customizable weapon loadouts.",
+    industry: ["Gaming", "Mobile", "Action"],
+    technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
+    image: fractalsImage,
+    href: "https://github.com/maximilianvincentius/fractals-of-entropy",
+    type: ProjectType.REPOSITORY,
+    overview: `Fractals of Entropy is a stylized top-down survival shooter for Android. Built with Unity and C#, the game focuses on fast-paced combat encounters, resource collection, mission progression, and deep weapon customization.
 
 Players navigate procedurally influenced arenas, managing health, ammo, and upgrades while enemies scale in difficulty. The game emphasizes tight controls and satisfying combat feedback in a mobile-first form factor.`,
-      problem: `Mobile shooters often sacrifice depth for accessibility. Most titles on the Android platform offer either simplified tap-to-win mechanics or overly complex controls that don't translate well to touch screens.
+    problem: `Mobile shooters often sacrifice depth for accessibility. Most titles on the Android platform offer either simplified tap-to-win mechanics or overly complex controls that don't translate well to touch screens.
 
 There was a gap for a game that delivers genuine skill-based combat, meaningful progression systems, and loadout customization without requiring a controller or compromising on mobile usability.`,
-      solution: `Fractals of Entropy bridges this gap with a control scheme optimized for touch input — virtual joystick movement with aim-assist mechanics that feel responsive without being automated.
+    solution: `Fractals of Entropy bridges this gap with a control scheme optimized for touch input — virtual joystick movement with aim-assist mechanics that feel responsive without being automated.
 
 The weapon loadout system gives players meaningful choices: each weapon class has distinct trade-offs in damage, fire rate, and resource cost. Mission progression ties directly into loadout unlocks, creating a satisfying gameplay loop where combat skill is rewarded with broader tactical options.`,
-      features: [
-        "Fast-paced top-down survival combat optimized for touch controls",
-        "Customizable weapon loadouts with distinct class trade-offs",
-        "Mission-based progression system with escalating difficulty",
-        "Resource collection and upgrade paths tied to combat performance",
-        "Stylized visual design with smooth performance on mid-range Android devices",
-      ],
-      techBreakdown: {
-        frontend: ["Unity", "C#"],
-        backend: ["Unity"],
-        other: ["Autodesk Maya", "Android SDK"],
-      },
-      privacyPolicy: `# Privacy Policy for Fractals of Entropy
+    features: [
+      "Fast-paced top-down survival combat optimized for touch controls",
+      "Customizable weapon loadouts with distinct class trade-offs",
+      "Mission-based progression system with escalating difficulty",
+      "Resource collection and upgrade paths tied to combat performance",
+      "Stylized visual design with smooth performance on mid-range Android devices",
+    ],
+    techBreakdown: {
+      frontend: ["Unity", "C#"],
+      backend: ["Unity"],
+      other: ["Autodesk Maya", "Android SDK"],
+    },
+    privacyPolicy: `# Privacy Policy for Fractals of Entropy
 # Effective Date: September 24, 2026
 
 Fractals of Entropy is an Android game developed and published by Maximilian Vincentius ("Developer," "we," "us," or "our").
@@ -147,43 +147,43 @@ If you have questions, concerns, or requests regarding this Privacy Policy or Fr
 
 Developer: Maximilian Vincentius
 Game: Fractals of Entropy
-Email: MaximilianVincentius@anyartirtalestari.com`,
-    },
-    {
-      id: "metro-circuit",
-      slug: "metro-circuit",
-      number: "03",
-      title: "Metro Circuit",
-      subtitle: "Racing Game",
-      description:
-        "Metro Circuit is an Android puzzle-exploration game created. Players explore a stylized futuristic city, follow mission objectives, move boxes, activate pressure plates and targets, complete puzzle stages, and unlock new areas.",
-      industry: ["Gaming", "Mobile", "Action"],
-      technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
-      image: metroCircuitImage,
-      href: "https://github.com/maximilianvincentius/metro-circuit",
-      type: ProjectType.REPOSITORY,
-      overview: `Metro Circuit is a puzzle-exploration game for Android set in a stylized futuristic city. Players navigate interconnected environments, solving spatial puzzles by moving boxes, activating pressure plates, and triggering targets to unlock new areas.
+Email: mv@pointxtech.com`,
+  },
+  {
+    id: "metro-circuit",
+    slug: "metro-circuit",
+    number: "03",
+    title: "Metro Circuit",
+    subtitle: "Racing Game",
+    description:
+      "Metro Circuit is an Android puzzle-exploration game created. Players explore a stylized futuristic city, follow mission objectives, move boxes, activate pressure plates and targets, complete puzzle stages, and unlock new areas.",
+    industry: ["Gaming", "Mobile", "Action"],
+    technologies: ["C#", "Unity", "Android", "Autodesk Maya"],
+    image: metroCircuitImage,
+    href: "https://github.com/maximilianvincentius/metro-circuit",
+    type: ProjectType.REPOSITORY,
+    overview: `Metro Circuit is a puzzle-exploration game for Android set in a stylized futuristic city. Players navigate interconnected environments, solving spatial puzzles by moving boxes, activating pressure plates, and triggering targets to unlock new areas.
 
 The game combines exploration with logic-based puzzle mechanics, encouraging players to observe their environment and experiment with interactive elements to progress.`,
-      problem: `Puzzle games on mobile often fall into two extremes: overly casual match-three mechanics, or ported PC puzzle designs with interfaces that feel clunky on touch devices.
+    problem: `Puzzle games on mobile often fall into two extremes: overly casual match-three mechanics, or ported PC puzzle designs with interfaces that feel clunky on touch devices.
 
 There was an opportunity to create a 3D puzzle-exploration experience designed natively for mobile — one that rewards spatial reasoning and curiosity without relying on abstract grid puzzles or tap-to-solve mechanics.`,
-      solution: `Metro Circuit delivers a 3D environment where puzzles are embedded in the world itself. Players physically navigate spaces, push objects, and interact with environmental mechanisms — making puzzle-solving feel tangible rather than abstract.
+    solution: `Metro Circuit delivers a 3D environment where puzzles are embedded in the world itself. Players physically navigate spaces, push objects, and interact with environmental mechanisms — making puzzle-solving feel tangible rather than abstract.
 
 The progression system gates new areas behind completed puzzle stages, creating a natural exploration loop. Each zone introduces new mechanics layered onto existing ones, keeping the challenge fresh without overwhelming the player.`,
-      features: [
-        "3D puzzle-exploration in a stylized futuristic city",
-        "Environmental puzzle mechanics: boxes, pressure plates, targets",
-        "Zone-based progression with gated unlocks",
-        "Layered mechanic introduction across stages",
-        "Touch-optimized controls for 3D navigation and interaction",
-      ],
-      techBreakdown: {
-        frontend: ["Unity", "C#"],
-        backend: ["Unity"],
-        other: ["Autodesk Maya", "Android SDK"],
-      },
-      privacyPolicy: `# Privacy Policy for Metro Circuit
+    features: [
+      "3D puzzle-exploration in a stylized futuristic city",
+      "Environmental puzzle mechanics: boxes, pressure plates, targets",
+      "Zone-based progression with gated unlocks",
+      "Layered mechanic introduction across stages",
+      "Touch-optimized controls for 3D navigation and interaction",
+    ],
+    techBreakdown: {
+      frontend: ["Unity", "C#"],
+      backend: ["Unity"],
+      other: ["Autodesk Maya", "Android SDK"],
+    },
+    privacyPolicy: `# Privacy Policy for Metro Circuit
 # Effective Date: September 24, 2026
 
 Metro Circuit is an Android game developed and published by Maximilian Vincentius ("Developer," "we," "us," or "our").
@@ -225,6 +225,6 @@ If you have questions, concerns, or requests regarding this Privacy Policy or Me
 
 Developer: Maximilian Vincentius
 Game: Metro Circuit
-Email: MaximilianVincentius@anyartirtalestari.com`,
-    },
-  ];
+Email: mv@pointxtech.com`,
+  },
+];
