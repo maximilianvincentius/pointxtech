@@ -87,7 +87,7 @@ export const Navigation = ({ className = '' }: Props) => {
       >
         <div className="flex items-center gap-3">
           <a href="/" className="text-lg font-bold text-ink tracking-tight transition-colors hover:text-accent">
-            PointX
+            PointXTech
           </a>
           <nav aria-label="Primary" className="hidden lg:flex items-center space-x-6 text-muted font-medium">
             {links.map((link) => (

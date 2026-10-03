@@ -21,7 +21,7 @@ export const FooterSection = () => (
       >
         <div>
           <a href="/" className="text-lg font-bold tracking-tight text-ink transition-colors hover:text-accent">
-            PointX
+            PointXTech
           </a>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
             Independent projects, still evolving.
@@ -46,7 +46,7 @@ export const FooterSection = () => (
       </motion.div>
 
       <div className="mt-10 flex flex-col gap-1 border-t border-line pt-5 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-        <p>© {new Date().getFullYear()} PointX — independent projects built from curiosity.</p>
+        <p>© {new Date().getFullYear()} PointXTech — independent projects built from curiosity.</p>
         <p>All rights reserved.</p>
       </div>
     </div>

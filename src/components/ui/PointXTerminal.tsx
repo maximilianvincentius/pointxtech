@@ -61,7 +61,7 @@ export const PointXTerminal = () => {
         // Reduced motion: show a stable completed state.
         if (prefersReducedMotion) {
           setOutputLines([
-            '$ pointx build',
+            '$ pointxtech build',
             '',
             `project: ${project.name}`,
             `stack:   ${project.stack}`,
@@ -71,7 +71,7 @@ export const PointXTerminal = () => {
             '[<████████████████████>] 100%',
             'build complete.',
             '',
-            '$ pointx next',
+            '$ pointxtech next',
             'searching for the next idea...',
             '→ something new',
             '',
@@ -85,7 +85,7 @@ export const PointXTerminal = () => {
         // 1. Type command
         // --------------------------------
 
-        const command = '$ pointx build';
+        const command = '$ pointxtech build';
         for (let i = 0; i <= command.length; i++) {
           if (signal.aborted) return;
 
@@ -178,7 +178,7 @@ export const PointXTerminal = () => {
         setOutputLines((prev) => [
           ...prev,
           '',
-          '$ pointx next',
+          '$ pointxtech next',
         ]);
 
         await sleep(500, signal);
