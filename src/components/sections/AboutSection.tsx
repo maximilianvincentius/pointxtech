@@ -14,7 +14,19 @@ export const AboutSection = () => (
 
       <div className="mt-16 max-w-xl text-muted leading-relaxed">
         <p>
-          We're a focused team of senior engineers who build custom software platforms and internal tools for ambitious founders and established product teams. We ship production-ready MVPs in 8–12 weeks, then scale them with the architecture and monitoring to support real growth.
+          PointXTech is a focused team of senior engineers who build custom software platforms and internal tools for ambitious founders and established product teams. We ship production-ready MVPs in 8–12 weeks, then scale them with the architecture and monitoring to support real growth.
+        </p>
+        <p className="mt-4">
+          Founded by{' '}
+          <a
+            href="https://www.maximilianvincentius.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-ink transition-colors hover:text-accent"
+          >
+            Maximilian Vincentius
+          </a>
+          , software engineer and product builder.
         </p>
       </div>
 

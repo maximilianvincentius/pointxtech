@@ -24,7 +24,16 @@ export const FooterSection = () => (
             PointXTech
           </a>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-            Independent projects, still evolving.
+            Independent projects, still evolving. Founded by{' '}
+            <a
+              href="https://www.maximilianvincentius.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-ink transition-colors hover:text-accent"
+            >
+              Maximilian Vincentius
+            </a>
+            .
           </p>
         </div>
 
