@@ -19,7 +19,7 @@ export const AboutSection = () => (
         <p className="mt-4">
           Founded by{' '}
           <a
-            href="https://www.maximilianvincentius.com/"
+            href="https://maximilianvincentius.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-ink transition-colors hover:text-accent"
