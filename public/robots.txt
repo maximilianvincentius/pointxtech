@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pointxtech.com/sitemap.xml
