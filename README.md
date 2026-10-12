@@ -1,75 +1,71 @@
-# React + TypeScript + Vite
+# pointxtech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Premium software engineering studio website. React + TypeScript + Vite + Tailwind CSS v4 + Framer Motion.
 
-Currently, two official plugins are available:
+Visual/design direction lives in `DESIGN.md`; engineering rules live in `AGENTS.md`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19 + TypeScript
+- Vite 8
+- Tailwind CSS v4 (`@tailwindcss/vite`)
+- Framer Motion
+- react-router-dom
+- lucide-react
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev      # dev server (Vite)
+npm run build    # production build -> dist/
+npm run preview  # serve built output
+npm run lint     # eslint .
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── assets/               # images (webp) + optimized variants in assets/opt
+├── components/
+│   ├── layout/           # Container, page scaffolding
+│   ├── navigation/       # Navbar
+│   ├── projects/         # ProjectCard, ProjectShowcase
+│   ├── sections/         # Hero, About, Services, Projects, Metrics, FAQ, Contact, Footer, ...
+│   └── ui/               # Button, ThemeToggle, EarthGlobe, PointXTerminal, FaqItem, ...
+├── constants/
+├── context/              # ThemeContext (dark/light)
+├── data/                 # services, projects, metrics, testimonials, faq
+├── lib/                  # geo helpers
+├── pages/                # HomePage, ProjectDetailPage, PrivacyPage
+├── services/             # contact form submission
+├── App.tsx               # routes + MotionConfig (respects prefers-reduced-motion)
+├── index.css             # Tailwind entry + design tokens
+└── main.tsx
 ```
+
+## Routes
+
+- `/` — home (all sections)
+- `/projects/:slug` — project detail
+- `/privacy` — privacy policy
+
+## Content
+
+Reusable content is data-driven. Edit `src/data/*.ts` rather than hardcoding text in components.
+
+## Conventions
+
+- Tailwind for styling; Framer Motion for entrance/scroll/transform animation. Don't animate the same property with both.
+- Small focused components; keep presentation separate from data.
+
+- Respect `prefers-reduced-motion` (handled globally via `MotionConfig reducedMotion="user"`).
+
+## Environment
+
+Copy `.env.example` to `.env` and fill required values (contact/email config).
+
+## ESLint
+
+Config in `eslint.config.js`. For stricter, type-aware rules, swap `tseslint.configs.recommended` for `recommendedTypeChecked` / `strictTypeChecked` and set `parserOptions.project` to `['./tsconfig.node.json', './tsconfig.app.json']`.
