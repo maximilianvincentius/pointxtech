@@ -205,6 +205,7 @@ export const ProjectDetailPage = () => {
             <div className="mt-10 md:mt-12 max-w-3xl text-muted leading-relaxed">
               {project.privacyPolicy.split('\n').map((line, i) => {
                 if (line.startsWith('# ')) return <h2 key={i} className="text-xl md:text-2xl font-bold text-ink mt-8 mb-4">{line.replace('# ', '')}</h2>;
+                if (line.startsWith('### ')) return <h4 key={i} className="text-base md:text-lg font-semibold text-ink mt-5 mb-2">{line.replace('### ', '')}</h4>;
                 if (line.startsWith('## ')) return <h3 key={i} className="text-lg md:text-xl font-semibold text-ink mt-6 mb-3">{line.replace('## ', '')}</h3>;
                 if (line.startsWith('- ')) return <li key={i} className="ml-6 mb-1 text-sm md:text-base">{line.replace('- ', '')}</li>;
                 if (line.trim() === '') return <br key={i} />;
