@@ -30,7 +30,6 @@ export const TestimonialsSection = () => {
           heading="Outcomes Speak Louder"
           variant="large"
         />
-
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {visible.map((testimonial: Testimonial, i: number) => (
             <motion.blockquote

@@ -3,6 +3,8 @@ import phyxhubImage from "@/assets/phyxhub.webp";
 import fractalsImage from "@/assets/fractals.webp";
 import metroCircuitImage from "@/assets/metro-circuit.webp";
 import toastatorImage from "@/assets/toastator.webp";
+import swastisvarna from "@/assets/swastisvarna.webp"; 
+
 export interface Project {
   id: string;
   slug: string;
@@ -609,7 +611,6 @@ The game combines exploration with logic-based puzzle mechanics, encouraging pla
 
 There was an opportunity to create a 3D puzzle-exploration experience designed natively for mobile — one that rewards spatial reasoning and curiosity without relying on abstract grid puzzles or tap-to-solve mechanics.`,
     solution: `Metro Circuit delivers a 3D environment where puzzles are embedded in the world itself. Players physically navigate spaces, push objects, and interact with environmental mechanisms — making puzzle-solving feel tangible rather than abstract.
-
 The progression system gates new areas behind completed puzzle stages, creating a natural exploration loop. Each zone introduces new mechanics layered onto existing ones, keeping the challenge fresh without overwhelming the player.`,
     features: [
       "3D puzzle-exploration in a stylized futuristic city",
@@ -657,5 +658,46 @@ The progression system gates new areas behind completed puzzle stages, creating 
       other: ["Android SDK"]
     },
     privacyPolicy: toastatorPrivacyPolicy,
+  },
+  {
+    id: "swastisvarna",
+    slug: "swastisvarna",
+    number: "05",
+    title: "Swastisvarna",
+    subtitle: "Community Platform for Active Ageing",
+    description:
+      "Swastisvarna is a community where seniors can socialize, explore their potential, empower one another, and remain active in society. It also encourages younger generations to care for, respect, and appreciate the elderly while helping them embrace their golden years with confidence and purpose.",
+    industry: ["Social Impact", "Community", "Health & Wellness"],
+    technologies: ["React", "Supabase"],
+    image: swastisvarna,
+    href: "https://swastisvarna.org/",
+    type: ProjectType.APP,
+    overview: `Swastisvarna is a community platform built for seniors who want to stay socially connected, mentally engaged, and active in society.
+
+The platform gives older members a space to meet one another, share interests, and support each other, while inviting younger generations to care for, respect, and appreciate the elderly.
+
+It pairs a senior-first experience with a modern web stack, so participation feels simple rather than technical.`,
+    problem: `Swastisvarna had no official web presence, so people hearing about the community found nowhere central to learn what it does, what programs it runs, or how to take part.
+
+Hiring ran on manual channels. Prospective staff had no direct way to apply online, so applications arrived scattered across email, chat, and paper forms.
+
+Daily operations depended on the same habit. Attendance and shift schedules were tracked on paper, so checking who was present or who was scheduled meant going through logbooks and calling people.`,
+    solution: `The official website went up as a digital company profile: one public address that presents the mission, the programs, and how seniors, families, and volunteers can get involved.
+
+A hiring portal lets prospective employees apply directly online. Applications arrive in one structured flow instead of scattered inboxes, making review and follow-up straightforward.
+
+Daily operations moved digital with an employee absence and shift-scheduling system. Paper logbooks were replaced by records staff can check and update in seconds, keeping coverage and attendance visible.`,
+    features: [
+      "Official website and digital company profile presenting mission, programs, and ways to get involved",
+      "Online hiring portal for direct applications with structured review and follow-up",
+      "Digital employee absence tracking replacing paper logbooks",
+      "Shift scheduling with day-to-day coverage visibility",
+      "Responsive web experience for desktop and mobile",
+    ],
+    techBreakdown: {
+      frontend: ["React"],
+      backend: ["Supabase"],
+      database: ["Supabase (PostgreSQL)"],
+    },
   },
 ];

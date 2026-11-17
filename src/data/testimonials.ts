@@ -18,17 +18,9 @@ export const testimonials: Testimonial[] = [
   {
     id: 't2',
     quote:
-      'A fun shooting game where every level brings its own challenge, keeping the experience fresh and exciting. The game mechanics are well thought out and the controls are responsive, making it a joy to play.',
+      'Swastisvarna needed more than a good-looking website. We needed tools the team would actually use every day. Max delivered our official site, an online hiring portal, and a shift and absence system that replaced our paper logbooks, and he kept the communication clear from start to finish.',
     author: 'Nining',
-    company: 'Fractals of Entropy',
-    role: 'Product Owner',
-  },
-  {
-    id: 't3',
-    quote:
-      'A futuristic racing experience set in a neon-lit cyberpunk city, combining high-speed driving with a stylized vision of the future. The game offers a unique blend of racing and exploration, with a focus on immersive environments and dynamic gameplay.',
-    author: 'Liam',
-    company: 'Metro Circuit',
+    company: 'swastisvarna',
     role: 'Product Owner',
   },
 ]
