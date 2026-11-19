@@ -523,7 +523,6 @@ export const projects = [
     slug: "phyxhub",
     number: "01",
     title: "PhyxHub",
-    subtitle: "Interactive Physics Learning Platform",
     description:
       "A simulation-first platform that lets students manipulate variables and watch physics come alive in real time.",
     industry: ["Education", "Interactive Web", "Simulation"],
@@ -560,7 +559,6 @@ The platform uses modern web technologies to deliver smooth, responsive simulati
     slug: "fractals-of-entropy",
     number: "02",
     title: "Fractals of Entropy",
-    subtitle: "Top-Down Survival Shooter",
     description:
       "A stylized Android survival shooter focused on fast-paced combat, resource collection, mission progression, and customizable weapon loadouts.",
     industry: ["Gaming", "Mobile", "Action"],
@@ -596,7 +594,6 @@ The weapon loadout system gives players meaningful choices: each weapon class ha
     slug: "metro-circuit",
     number: "03",
     title: "Metro Circuit",
-    subtitle: "Racing Game",
     description:
       "Metro Circuit is an Android puzzle-exploration game created. Players explore a stylized futuristic city, follow mission objectives, move boxes, activate pressure plates and targets, complete puzzle stages, and unlock new areas.",
     industry: ["Gaming", "Mobile", "Action"],
@@ -631,7 +628,6 @@ The progression system gates new areas behind completed puzzle stages, creating 
     slug: "toastator",
     number: "04",
     title: "Toastator",
-    subtitle: "Puzzle Game",
     description:
       "Toastator is a stylized, kitchen-themed game featuring a chef character, bread and crouton enemies, and a toaster boss. Its visual collection includes playable-character designs, weapon concepts, collectible items, kitchen environments, skill illustrations, combat effects, and game interface artwork.",
     industry: ["Gaming", "Action", "Mobile"],
@@ -664,7 +660,6 @@ The progression system gates new areas behind completed puzzle stages, creating 
     slug: "swastisvarna",
     number: "05",
     title: "Swastisvarna",
-    subtitle: "Community Platform for Active Ageing",
     description:
       "Swastisvarna is a community where seniors can socialize, explore their potential, empower one another, and remain active in society. It also encourages younger generations to care for, respect, and appreciate the elderly while helping them embrace their golden years with confidence and purpose.",
     industry: ["Social Impact", "Community", "Health & Wellness"],

@@ -14,13 +14,5 @@ export const testimonials: Testimonial[] = [
     author: 'Felix',
     company: 'Phyxhub',
     role: 'Project Mentor',
-  },
-  {
-    id: 't2',
-    quote:
-      'Swastisvarna needed more than a good-looking website. We needed tools the team would actually use every day. Max delivered our official site, an online hiring portal, and a shift and absence system that replaced our paper logbooks, and he kept the communication clear from start to finish.',
-    author: 'Nining',
-    company: 'swastisvarna',
-    role: 'Product Owner',
-  },
+  }
 ]
